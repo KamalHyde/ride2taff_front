@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddRideService } from 'src/app/rideServices/add-ride.service'
 
 @Component({
   selector: 'app-add-ride',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddRideComponent implements OnInit {
 
-  constructor() { }
+  constructor(private addRideService : AddRideService) { }
 
   ngOnInit(): void {
   }
+
+  //méthode pour enregistrer une course
+  save_ride(ride: any){
+    let data = ride.value;
+    this.addRideService.addNewRide(data).subscribe(() => {
+      console.log('saved success')
+    })
+  }
+
 
 }
