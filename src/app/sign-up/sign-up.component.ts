@@ -13,7 +13,7 @@ export class SignUpComponent implements OnInit {
   // initialisation de la variable de type formGroup
   signupForm!: FormGroup;
 
-  // egex pour email
+  // Regex pour email
   emailRegex!: RegExp;
   constructor(private service: UserService, private formBuilder: FormBuilder) { }
 
