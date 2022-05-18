@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ResultsComponent } from './results/results.component';
 import { AddRideComponent } from './add-ride/add-ride.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DemandsReceivedComponent } from './demands-received/demands-received.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     ResultsComponent,
-    AddRideComponent
+    AddRideComponent,
+    DemandsReceivedComponent
   ],
   imports: [
     BrowserModule,

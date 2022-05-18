@@ -1,0 +1,44 @@
+<div class="row" *ngFor="let ride of rides">
+	<div class="col-sm-6">
+		<div class="card">
+			<div class="card-body">
+				<p>{{ride.displayDepartureAddress}}</p>
+				<p>{{ride.displayArrivalAddress}}</p>
+				<button (click)="openReceivedDemands(ride.id)" type="button" class="btn btn-primary"
+					data-toggle="modal" data-target="#exampleModal">Voir les demandes</button>
+				<button (click)="deleteRideDriver(ride.id)">Supprimer le trajet</button>
+			</div>
+		</div>
+	</div>
+	<!---- Début Pop up ---->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Demandes reçues</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- ******Début fenetre demandes****** -->
+					<div class="row" *ngFor="let demand of demands">
+						<div class="col-sm-6">
+							<div class="card">
+								<div class="card-body">
+								
+									<p>{{demand.display_user_name}}</p>
+									<button (click)="acceptDemand(demand.id, ride.id)">Accepter</button>
+									<button (click)="declineDemand(demand.id, ride.id)">Refuser</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ******Fin fenetre demandes******* -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---- Fin Pop up-->
+</div>
