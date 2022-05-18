@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RidesService } from '../services/rides.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-homepage',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-
-  constructor() { }
+  ride : any;
+  constructor(private rideService : RidesService, private router : Router) { }
 
   ngOnInit(): void {
-  }
 
-}
+    }
+    searchRide(formSearchRide: any){
+      let searchRide = formSearchRide.value;
+      this.rideService.searchByZipDate(searchRide).subscribe(data =>{
+        this.ride = data;
+        this.router.navigateByUrl('/results');
+        console.log(data);
+      })
+      
+    }
+
+    
+  }
