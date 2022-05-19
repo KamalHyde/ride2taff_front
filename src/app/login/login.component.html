@@ -12,6 +12,12 @@
 			<input type="text" class="form-control" id="password" formControlName="password">
 		</div>
 
-		<button type="submit" (click)="onLogin()" [disabled]="loginForm.invalid" class="btn btn-primary">Se connecter</button>
+		<div>
+			<button type="submit" (click)="onLogin()" [disabled]="loginForm.invalid" class="btn btn-primary">Se connecter</button>
+			<p>Pas encore de compte ? <a routerLink="/signup"> Inscris-toi !</a></p>
+		</div>
+		
+		
+
 	</form>
 </div>
