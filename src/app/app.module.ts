@@ -14,6 +14,7 @@ import { ResultsComponent } from './results/results.component';
 import { AddRideComponent } from './add-ride/add-ride.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemandsReceivedComponent } from './demands-received/demands-received.component';
+import { DeleteUsersComponent } from './delete-users/delete-users.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DemandsReceivedComponent } from './demands-received/demands-received.co
     FooterComponent,
     ResultsComponent,
     AddRideComponent,
-    DemandsReceivedComponent
+    DemandsReceivedComponent,
+    DeleteUsersComponent
   ],
   imports: [
     BrowserModule,

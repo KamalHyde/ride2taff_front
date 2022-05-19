@@ -31,4 +31,11 @@ export class UserService {
   declineDemand(user_id: any, ride_id: any) {
     return this.http.get("http://localhost:8080/bookedride/declinerequest?user_id=" + user_id + "&ride_id=" + ride_id);
   }
+
+  deleteUser(id:any){
+    return this.http.get("http://localhost:8080/users/delete/" + id);
+  }
+  getAllUser(){
+    return this.http.get("http://localhost:8080/users/all")
+  }
 }

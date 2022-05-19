@@ -1,43 +1,41 @@
 <div class="container">
 
-    <h1 class=" mt-4 mb-4 text-center">Tout les chemins mènent à IPIPOE</h1>
+    <h1 class=" mt-4 mb-4 text-center">Tous les chemins mènent à IPIPOE</h1>
     
 
 
     <div class="card mb-3 bg-info" >                
-            <div class="card-body " >                
-              <form (ngSubmit)="searchRide(formSearchRide)" #formSearchRide="ngForm">  
-                    <div class="form-group "> 
-                        <input type="text" class="form-control" name="departure_zip_code" ngModel placeholder="Code Postal">
-                    </div>
+        <div class="card-body " >                
+            <form (ngSubmit)="searchRide(formSearchRide)" #formSearchRide="ngForm">  
+                <div class="form-group "> 
+                    <input type="text" class="form-control" name="departure_zip_code" ngModel placeholder="Code Postal">
+                </div>
 
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="jour" ngModel placeholder="Jour">
-                    </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="jour" ngModel placeholder="Jour">
+                </div>
 
-                    <div class="form-group">
-                        <input type="datetime" class="form-control"  name="mois" ngModel placeholder="Mois">
-                    </div>
+                <div class="form-group">
+                    <input type="datetime" class="form-control"  name="mois" ngModel placeholder="Mois">
+                </div>
 
-                    <div class="form-group">
-                        <input  type="datetime" class="form-control"  name="annee" ngModel placeholder="Année">
-                    </div>
-                     
-                    <div class="form-group text-center">
-                        <button type="submit" class="btn btn-primary">Rechercher</button>
-                    </div>   
-            </form>                     
-            </div>            
+                <div class="form-group">
+                    <input  type="datetime" class="form-control"  name="annee" ngModel placeholder="Année">
+                </div>
+                    
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">Rechercher</button>
+                </div>   
+        </form>                     
+        </div>            
     </div>
 
 
     <div class="form-group text-center ">
         <a href="http://localhost:4200/login"  class="btn btn-lg btn-primary">Se connecter</a>
             <div class="col-mg-2"> Pas encore inscrit?
-        <a href="http://localhost:4200/sign-up" class="link-primary">   Créer un compte </a>
+        <a href="http://localhost:4200/signup" class="link-primary">   Créer un compte </a>
     </div>
 
-
-   
-    </div>    
+</div>    
     
