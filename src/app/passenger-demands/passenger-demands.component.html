@@ -1,0 +1,16 @@
+<div class="container">
+    <h2 class=" mt-4 mb-4 text-center">Vos demandes de trajets :</h2>
+    <div class="row" *ngFor="let demand of demands">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <p>Ville de départ :{{ demand.display_city }}, {{ demand.departure_zip_code }}</p>
+                    <p>Date de départ : {{ demand.departure_date }}</p>
+                    <p>Ville d'arrivée : {{ demand.arrival_city }}</p>
+                    <p>{{ demand.status }}</p>
+                    <button (click)="cancelRequest(demand.id_request)">Annuler demande</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
