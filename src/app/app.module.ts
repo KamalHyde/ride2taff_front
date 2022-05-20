@@ -10,7 +10,6 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ResultsComponent } from './results/results.component';
 import { AddRideComponent } from './add-ride/add-ride.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemandsReceivedComponent } from './demands-received/demands-received.component';
@@ -26,7 +25,6 @@ import { PassengerDemandsComponent } from './passenger-demands/passenger-demands
     ProfileComponent,
     HeaderComponent,
     FooterComponent,
-    ResultsComponent,
     AddRideComponent,
     DemandsReceivedComponent,
     AddRegularRideComponent,

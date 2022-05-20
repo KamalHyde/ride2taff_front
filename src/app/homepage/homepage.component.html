@@ -1,43 +1,73 @@
 <div class="container">
 
-    <h1 class=" mt-4 mb-4 text-center">Tout les chemins mènent à IPIPOE</h1>
-    
+    <!-- En-tête -->
 
+  <h1 class="mt-4 mb-4 text-center">Tous les chemins mènent à IPIPOE</h1>
 
-    <div class="card mb-3 bg-info" >                
-            <div class="card-body " >                
-              <form (ngSubmit)="searchRide(formSearchRide)" #formSearchRide="ngForm">  
-                    <div class="form-group "> 
-                        <input type="text" class="form-control" name="departure_zip_code" ngModel placeholder="Code Postal">
-                    </div>
+  <!-- Début formulaire de recherche -->
 
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="jour" ngModel placeholder="Jour">
-                    </div>
+  <div class="card mb-3 bg-info">
+    <div class="card-body">
+      <form (ngSubmit)="searchRide(formSearchRide)" #formSearchRide="ngForm">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="departure_zip_code"
+            ngModel
+            placeholder="Code Postal"
+          />
+        </div>
 
-                    <div class="form-group">
-                        <input type="datetime" class="form-control"  name="mois" ngModel placeholder="Mois">
-                    </div>
+        <div class="form-group">
+          <input type="date" class="form-control" name="departure_date" placeholder="Date de départ" ngModel>
+        </div>
 
-                    <div class="form-group">
-                        <input  type="datetime" class="form-control"  name="annee" ngModel placeholder="Année">
-                    </div>
-                     
-                    <div class="form-group text-center">
-                        <button type="submit" class="btn btn-primary">Rechercher</button>
-                    </div>   
-            </form>                     
-            </div>            
+        <div class="form-group text-center">
+          <button type="submit" class="btn btn-primary">Rechercher</button>
+        </div>
+      </form>
     </div>
+  </div>
 
+  <!-- Fin formulaire de recherche -->
 
-    <div class="form-group text-center ">
-        <a href="http://localhost:4200/login"  class="btn btn-lg btn-primary">Se connecter</a>
-            <div class="col-mg-2"> Pas encore inscrit?
-        <a href="http://localhost:4200/sign-up" class="link-primary">   Créer un compte </a>
+  <!-- Début résultats de recherche -->
+
+  <div class="row" *ngFor="let r of ride">
+    <div class="col-sm-8">
+      <div class="card m-4" style="max-width: 700px">
+        <div class="row g-0">
+          <div class="col-sm-4">
+            <img
+              src="https://cdn.discordapp.com/attachments/965882397306523728/976769049029644308/Sans_titre_9_-removebg-preview.png"
+              alt=""
+              class="mx-auto my-auto img-fluid rounded-start"
+            />
+          </div>
+          <div class="col-sm-8">
+            <div class="card-body row">
+              <div class="col-sm-7">
+                <p class="text-info">Date de départ :</p>
+                <p class="text-info">Lieu de départ :</p>
+                <p class="text-info">Heure de départ :</p>
+                <p class="text-info">Nombre de places :</p>
+              </div>
+              <div class="col-sm-5">
+                <p>{{ r.date }}</p>
+                <p style="text-transform: capitalize">
+                  {{ r.departure_city }} {{ r.departure_zip_code }}
+                </p>
+                <p>{{ r.times }}</p>
+                <p>{{ r.seats }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
+  <!-- Fin résultats de recherche -->
 
-   
-    </div>    
-    
+</div>

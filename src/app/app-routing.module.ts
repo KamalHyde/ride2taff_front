@@ -7,13 +7,11 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { PassengerDemandsComponent } from './passenger-demands/passenger-demands.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ResultsComponent } from './results/results.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path:'login', component: LoginComponent },
-  { path:'results', component: ResultsComponent },
   { path:'signup', component: SignUpComponent},
   { path:'profile', component: ProfileComponent },
   { path:'addride', component: AddRideComponent },
