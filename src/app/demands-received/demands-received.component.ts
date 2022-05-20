@@ -14,7 +14,7 @@ export class DemandsReceivedComponent implements OnInit {
   constructor(private service: UserService) { }
 
   ngOnInit(): void {
-    this.getAllRidesByDriver(4);
+    this.getAllRidesByDriver(9);
   }
 
   getAllRidesByDriver(id: any) {
@@ -33,7 +33,7 @@ export class DemandsReceivedComponent implements OnInit {
 
   deleteRideDriver(id: any) {
     return this.service.deleteRideDriver(id).subscribe(() => {
-      this.getAllRidesByDriver(4);
+      this.getAllRidesByDriver(9);
     });
   }
 

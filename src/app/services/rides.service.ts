@@ -15,4 +15,8 @@ export class RidesService {
     return this.http.post("http://localhost:8080/rides/searchride", searchRide);
 
   }
+
+  newRegularRide(newRegularRide: any) {
+    return this.http.post("http://localhost:8080/rides/newregularride", newRegularRide)
+  }
 }

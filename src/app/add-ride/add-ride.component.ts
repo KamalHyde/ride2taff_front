@@ -16,6 +16,7 @@ export class AddRideComponent implements OnInit {
   //méthode pour enregistrer une course
   save_ride(ride: any){
     let data = ride.value;
+    console.log(data);
     this.addRideService.addNewRide(data).subscribe(() => {
       console.log('saved success')
     })

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RidesService } from '../services/rides.service';
-import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-homepage',
