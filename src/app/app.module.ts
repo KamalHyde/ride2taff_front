@@ -15,6 +15,7 @@ import { AddRideComponent } from './add-ride/add-ride.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemandsReceivedComponent } from './demands-received/demands-received.component';
 import { AddRegularRideComponent } from './add-regular-ride/add-regular-ride.component';
+import { PassengerDemandsComponent } from './passenger-demands/passenger-demands.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AddRegularRideComponent } from './add-regular-ride/add-regular-ride.com
     ResultsComponent,
     AddRideComponent,
     DemandsReceivedComponent,
-    AddRegularRideComponent
+    AddRegularRideComponent,
+    PassengerDemandsComponent
   ],
   imports: [
     BrowserModule,
