@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddRegularRideComponent } from './add-regular-ride/add-regular-ride.component';
 import { AddRideComponent } from './add-ride/add-ride.component';
 import { DemandsReceivedComponent } from './demands-received/demands-received.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path:'signup', component: SignUpComponent},
   { path:'profile', component: ProfileComponent },
   { path:'addride', component: AddRideComponent },
-  { path:'demands-received', component: DemandsReceivedComponent }
+  { path:'demands-received', component: DemandsReceivedComponent },
+  { path:'addregularride', component: AddRegularRideComponent }
 ];
 
 @NgModule({
