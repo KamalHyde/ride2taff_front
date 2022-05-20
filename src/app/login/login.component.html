@@ -1,23 +1,37 @@
 <div class="container">
-	<!--Titre-->
-	<h1 class="text-center">Connexion à Ride2taff</h1>
-	<!--Début du formulaire d'inscription-->
-	<form [formGroup]="loginForm">
-		<div class="mb-3">
-			<label for="email" class="form-label">Email</label>
-			<input type="text" class="form-control" id="email" formControlName="email">
-		</div>
-		<div class="mb-3">
-			<label for="password" class="form-label">Mot de passe</label>
-			<input type="text" class="form-control" id="password" formControlName="password">
-		</div>
+  <!--Titre-->
+  <h1 class="text-center">Connexion à Ride2taff</h1>
+  <!--Début du formulaire d'inscription-->
+  <form [formGroup]="loginForm">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Mot de passe</label>
+      <input
+        type="text"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+    </div>
 
-		<div>
-			<button type="submit" (click)="onLogin()" [disabled]="loginForm.invalid" class="btn btn-primary">Se connecter</button>
-			<p>Pas encore de compte ? <a routerLink="/signup"> Inscris-toi !</a></p>
-		</div>
-		
-		
-
-	</form>
+    <div>
+      <button
+        type="submit"
+        (click)="onLogin()"
+        [disabled]="loginForm.invalid"
+        class="btn btn-primary"
+      >
+        Se connecter
+      </button>
+      <p>Pas encore de compte ? <a routerLink="/signup"> Inscris-toi !</a></p>
+    </div>
+  </form>
 </div>
