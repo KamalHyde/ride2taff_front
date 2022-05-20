@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RidesService } from '../services/rides.service';
-import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-homepage',
@@ -19,7 +18,6 @@ export class HomepageComponent implements OnInit {
       let searchRide = formSearchRide.value;
       this.rideService.searchByZipDate(searchRide).subscribe(data =>{
         this.ride = data;
-        this.router.navigateByUrl('/results');
         console.log(data);
       })
       
