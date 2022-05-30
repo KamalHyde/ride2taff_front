@@ -48,4 +48,8 @@ export class UserService {
     return this.http.delete("http://localhost:8080/bookedride/deleterequest?ride_id=" + id);
 
   }
+
+  sendARequest(user_id: any, ride_id: any) {
+    return this.http.get("http://localhost:8080/bookedride/sendrequest?user_id=" + user_id + "&ride_id=" + ride_id);
+  }
 }
