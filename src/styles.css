@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+/*homepage*/
+.banner {
+	display: block;
+    max-width: 40%;
+    margin: auto;
+}
+
+.search {
+	background-color: #2EC4B6;
+}
+
+.btn {
+	background-color: #26547C;
+	color: white;
+}
