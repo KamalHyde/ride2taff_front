@@ -37,7 +37,8 @@ export class UserService {
     return this.http.get("http://localhost:8080/users/delete/" + id);
   }
   getAllUser(){
-    return this.http.get("http://localhost:8080/users/all")
+    return this.http.get("http://localhost:8080/users/all");
+  }
 
   openPassengerDemands(id: any) {
     return this.http.get("http://localhost:8080/bookedride/ridesbyuser/"+ id);
