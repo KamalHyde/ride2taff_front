@@ -5,6 +5,7 @@ import { AddRideComponent } from './add-ride/add-ride.component';
 import { DeleteUsersComponent } from './delete-users/delete-users.component';
 import { DemandsReceivedComponent } from './demands-received/demands-received.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { InformationUserComponent } from './information-user/information-user.component';
 import { LoginComponent } from './login/login.component';
 import { PassengerDemandsComponent } from './passenger-demands/passenger-demands.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path:'demands-received', component: DemandsReceivedComponent },
   { path:'delete-users', component: DeleteUsersComponent },
   { path:'addregularride', component: AddRegularRideComponent },
-  { path:'passenger-demands', component: PassengerDemandsComponent}
+  { path:'passenger-demands', component: PassengerDemandsComponent},
+  { path:'information-user', component: InformationUserComponent}
 ];
 
 @NgModule({
