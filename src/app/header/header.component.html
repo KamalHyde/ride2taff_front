@@ -14,7 +14,12 @@
           <li class="nav-item px-5">
             <a class="nav-link text-warning" routerLink="/login">Login</a>
           </li>
+
+          <li *ngIf="isConnect()" class="nav-item px-5">
+            <button (click)="onLogout()">Logout</button>
+          </li>
         </ul>
+
       </div>
     </div>
   </nav>

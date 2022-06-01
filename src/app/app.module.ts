@@ -1,5 +1,5 @@
 import { HttpClientModule} from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,7 @@ import { DemandsReceivedComponent } from './demands-received/demands-received.co
 import { DeleteUsersComponent } from './delete-users/delete-users.component';
 import { AddRegularRideComponent } from './add-regular-ride/add-regular-ride.component';
 import { PassengerDemandsComponent } from './passenger-demands/passenger-demands.component';
+import { httpInterceptorProviders } from './interceptor';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,10 @@ import { PassengerDemandsComponent } from './passenger-demands/passenger-demands
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR' },
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -8,13 +9,16 @@ import { UserService } from '../services/user.service';
 })
 export class DemandsReceivedComponent implements OnInit {
 
+  token: any;
   rides!: any;
   demands!: any;
 
-  constructor(private service: UserService) { }
+  constructor(private authService: AuthService, private service: UserService) { }
 
   ngOnInit(): void {
-    this.getAllRidesByDriver(9);
+    this.token = localStorage.getItem("ID");
+    this.getAllRidesByDriver(this.token);
+    console.log(this.token);
   }
 
   getAllRidesByDriver(id: any) {
