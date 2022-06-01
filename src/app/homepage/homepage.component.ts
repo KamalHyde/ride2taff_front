@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RidesService } from '../services/rides.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-homepage',
@@ -9,9 +10,11 @@ import { RidesService } from '../services/rides.service';
 })
 export class HomepageComponent implements OnInit {
   ride : any;
-  constructor(private rideService : RidesService, private router : Router) { }
+  user_id: any;
+  constructor(private userService: UserService, private rideService : RidesService, private router : Router) { }
 
   ngOnInit(): void {
+    this.user_id = 9;
 
     }
     searchRide(formSearchRide: any){
@@ -23,5 +26,8 @@ export class HomepageComponent implements OnInit {
       
     }
 
+  sendARequest(user_id: any, ride_id: any) {
+    this.userService.sendARequest(user_id, ride_id).subscribe();
+  }
     
   }
