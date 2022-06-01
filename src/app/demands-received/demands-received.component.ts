@@ -16,9 +16,13 @@ export class DemandsReceivedComponent implements OnInit {
   constructor(private authService: AuthService, private service: UserService) { }
 
   ngOnInit(): void {
+
+    this.getAllRidesByDriver(11);
+
     this.token = localStorage.getItem("ID");
     this.getAllRidesByDriver(this.token);
     console.log(this.token);
+
   }
 
   getAllRidesByDriver(id: any) {
