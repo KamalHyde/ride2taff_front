@@ -16,7 +16,11 @@ import { DemandsReceivedComponent } from './demands-received/demands-received.co
 import { DeleteUsersComponent } from './delete-users/delete-users.component';
 import { AddRegularRideComponent } from './add-regular-ride/add-regular-ride.component';
 import { PassengerDemandsComponent } from './passenger-demands/passenger-demands.component';
+
+import { InformationUserComponent } from './information-user/information-user.component';
+
 import { httpInterceptorProviders } from './interceptor';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { httpInterceptorProviders } from './interceptor';
     DemandsReceivedComponent,
     DeleteUsersComponent,
     AddRegularRideComponent,
-    PassengerDemandsComponent
+    PassengerDemandsComponent,
+    InformationUserComponent
 
   ],
   imports: [

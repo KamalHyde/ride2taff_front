@@ -7,6 +7,7 @@ import { DeleteUsersComponent } from './delete-users/delete-users.component';
 import { DemandsReceivedComponent } from './demands-received/demands-received.component';
 import { AuthGuard } from './guard/auth.guard';
 import { HomepageComponent } from './homepage/homepage.component';
+import { InformationUserComponent } from './information-user/information-user.component';
 import { LoginComponent } from './login/login.component';
 import { PassengerDemandsComponent } from './passenger-demands/passenger-demands.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path:'delete-users', component: DeleteUsersComponent, canActivate: [AuthGuard] },
   { path:'addregularride', component: AddRegularRideComponent, canActivate: [AuthGuard] },
   { path:'passenger-demands', component: PassengerDemandsComponent, canActivate: [AuthGuard]}
+  { path:'information-user', component: InformationUserComponent}
 ];
 
 @NgModule({
