@@ -1,15 +1,3 @@
-/*homepage*/
-.banner {
-	display: block;
-    max-width: 40%;
-    margin: auto;
-}
-
-.search {
-	background-color: #2EC4B6;
-}
-
-.btn {
-	background-color: #26547C;
-	color: white;
+.container{
+    min-height: 100vh;
 }
