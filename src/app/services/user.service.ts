@@ -37,7 +37,10 @@ export class UserService {
     return this.http.get("http://localhost:8080/users/delete/" + id);
   }
   getAllUser(){
-    return this.http.get("http://localhost:8080/users/all");}
+-
+    return this.http.get("http://localhost:8080/users/all");
+  }
+
 
   openPassengerDemands(id: any) {
     return this.http.get("http://localhost:8080/bookedride/ridesbyuser/"+ id);
@@ -48,8 +51,13 @@ export class UserService {
 
   }
 
+
   getInformationUser(id:any){
     return this.http.get("http://localhost:8080/users/get/" + id);
+
+
+  sendARequest(user_id: any, ride_id: any) {
+    return this.http.get("http://localhost:8080/bookedride/sendrequest?user_id=" + user_id + "&ride_id=" + ride_id);
 
   }
 }
