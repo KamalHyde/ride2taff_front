@@ -23,7 +23,7 @@ const routes: Routes = [
   { path:'demands-received', component: DemandsReceivedComponent, canActivate: [AuthGuard] },
   { path:'delete-users', component: DeleteUsersComponent, canActivate: [AuthGuard] },
   { path:'addregularride', component: AddRegularRideComponent, canActivate: [AuthGuard] },
-  { path:'passenger-demands', component: PassengerDemandsComponent, canActivate: [AuthGuard]}
+  { path:'passenger-demands', component: PassengerDemandsComponent, canActivate: [AuthGuard] },
   { path:'information-user', component: InformationUserComponent}
 ];
 
