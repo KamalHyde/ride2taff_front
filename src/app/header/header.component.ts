@@ -9,9 +9,12 @@ import { AuthService } from '../services/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
+  name: any;
+
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
+    this.name = localStorage.getItem("displayName");
   }
 
   isConnect() {
@@ -23,6 +26,7 @@ export class HeaderComponent implements OnInit {
 
   onLogout() {
     localStorage.clear();
-    this.router.navigateByUrl("/")
+    this.router.navigateByUrl("/");
+    location.reload();
   }
 }

@@ -14,9 +14,9 @@ export class HomepageComponent implements OnInit {
   constructor(private userService: UserService, private rideService : RidesService, private router : Router) { }
 
   ngOnInit(): void {
-    this.user_id = 9;
+    this.user_id = localStorage.getItem("ID");
+  }
 
-    }
     searchRide(formSearchRide: any){
       let searchRide = formSearchRide.value;
       this.rideService.searchByZipDate(searchRide).subscribe(data =>{

@@ -24,7 +24,8 @@ export class AddRegularRideComponent implements OnInit {
       departure_time: [null, [Validators.required]],
       start_date: [null, [Validators.required]],
       end_date: [null, [Validators.required]],
-      status: [null, [Validators.required]]
+      status: [null, [Validators.required]],
+      user_id: [Number(localStorage.getItem("ID"))]
     })
   }
 
