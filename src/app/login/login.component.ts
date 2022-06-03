@@ -11,7 +11,7 @@ import { UserService } from '../services/user.service';
 })
 export class LoginComponent implements OnInit {
   
-  user_id: any;
+  user_info: any;
   loginForm!: FormGroup;
   emailRegex!: RegExp;
   
@@ -30,10 +30,13 @@ export class LoginComponent implements OnInit {
     
     console.log(this.loginForm.value);
     this.authService.login(this.loginForm.value).subscribe((data: any) =>{
-      this.user_id = data;
-      localStorage.setItem("ID", this.user_id);
+      this.user_info = data;
+      localStorage.setItem("ID", this.user_info.id);
       this.router.navigateByUrl('/demands-received');
       localStorage.setItem("isLogged", "true");
+      localStorage.setItem("role", this.user_info.role);
+      localStorage.setItem("email", this.user_info.email);
+      localStorage.setItem("displayName", this.user_info.displayName);
     });
     
   }

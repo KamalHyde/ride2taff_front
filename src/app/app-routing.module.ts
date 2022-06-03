@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SocialAuthService } from 'angularx-social-login';
 import { AddRegularRideComponent } from './add-regular-ride/add-regular-ride.component';
 import { AddRideComponent } from './add-ride/add-ride.component';
 import { DeleteUsersComponent } from './delete-users/delete-users.component';
