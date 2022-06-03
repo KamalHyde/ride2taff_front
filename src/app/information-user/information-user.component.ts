@@ -12,7 +12,7 @@ export class InformationUserComponent implements OnInit {
   constructor(private service: UserService) { }
 
   ngOnInit(): void {
-    this.getInformationUser(11);
+    this.getInformationUser(Number(localStorage.getItem("ID")));
   }
 
   getInformationUser(id: any) {
