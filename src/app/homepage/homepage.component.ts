@@ -29,5 +29,12 @@ export class HomepageComponent implements OnInit {
   sendARequest(user_id: any, ride_id: any) {
     this.userService.sendARequest(user_id, ride_id).subscribe();
   }
+
+  isConnect() {
+    if(localStorage.getItem('isLogged') == 'true') {
+      return true;
+    }
+    return false;
+  }
     
   }

@@ -32,16 +32,17 @@
             <li class="dropdown-item nav-link"><a class="nav-link" href="#" routerLink="/addregularride">Ajouter une course régulière</a></li>
           </ul>          
         </li>
-        <li class="nav-item px-5" *ngIf="isConnect() == false">
-          <a class="nav-link text-warning" routerLink="/login">Login</a>
-        </li>
-
+        
         <li class="nav-item px-5">
           <a class="nav-link text-warning" routerLink="/profile">Mon profil</a>
         </li>
 
+        <li class="nav-item px-5" *ngIf="isConnect() == false">
+          <button class="btn btn-primary" routerLink="/login">Connexion</button>
+        </li>
+
         <li *ngIf="isConnect()" class="nav-item px-5">
-          <button class="btn btn-danger" (click)="onLogout()">Logout</button>
+          <button class="btn btn-danger" (click)="onLogout()">Déconnexion</button>
         </li>
       </ul>
     </div>
