@@ -15,8 +15,8 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
     this.user_id = localStorage.getItem("ID");
+  }
 
-    }
     searchRide(formSearchRide: any){
       let searchRide = formSearchRide.value;
       this.rideService.searchByZipDate(searchRide).subscribe(data =>{
