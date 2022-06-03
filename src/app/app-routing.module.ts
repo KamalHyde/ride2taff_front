@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SocialAuthService } from 'angularx-social-login';
 import { AddRegularRideComponent } from './add-regular-ride/add-regular-ride.component';
 import { AddRideComponent } from './add-ride/add-ride.component';
 import { DeleteUsersComponent } from './delete-users/delete-users.component';
@@ -23,7 +22,7 @@ const routes: Routes = [
   { path:'demands-received', component: DemandsReceivedComponent, canActivate: [AuthGuard] },
   { path:'delete-users', component: DeleteUsersComponent, canActivate: [AuthGuard] },
   { path:'addregularride', component: AddRegularRideComponent, canActivate: [AuthGuard] },
-  { path:'passenger-demands', component: PassengerDemandsComponent, canActivate: [AuthGuard]}
+  { path:'passenger-demands', component: PassengerDemandsComponent, canActivate: [AuthGuard] },
   { path:'information-user', component: InformationUserComponent}
 ];
 
