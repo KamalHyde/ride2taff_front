@@ -20,6 +20,7 @@ import { PassengerDemandsComponent } from './passenger-demands/passenger-demands
 import { InformationUserComponent } from './information-user/information-user.component';
 
 import { httpInterceptorProviders } from './interceptor';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { httpInterceptorProviders } from './interceptor';
     DeleteUsersComponent,
     AddRegularRideComponent,
     PassengerDemandsComponent,
-    InformationUserComponent
+    InformationUserComponent,
+    EditUserComponent
 
   ],
   imports: [

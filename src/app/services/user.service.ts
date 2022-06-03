@@ -12,6 +12,10 @@ export class UserService {
     return this.http.post("http://localhost:8080/users/newuser", user);
   }
 
+  editUser(user: any) {
+    return this.http.get("http://localhost:8080/users/edit?id=" + user.id + "&first_name=" + user.first_name +"&last_name=" + user.last_name + "&email=" + user.email);
+  }
+
   getAllRidesByDriver(id: any) {
     return this.http.get("http://localhost:8080/rides/ridesbydriver/" + id);
   }

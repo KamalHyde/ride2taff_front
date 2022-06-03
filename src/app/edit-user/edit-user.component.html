@@ -1,0 +1,23 @@
+<div class="container">
+    <!--Titre-->
+    <h1 class="text-center">Modifier votre compte</h1>
+    <!--Début du formulaire d'inscription-->
+    <form #editForm="ngForm" (ngSubmit)="editUser(editForm)">
+        <div class="mb-3">
+            <label for="first_name" class="form-label">Prenom</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" [(ngModel)]="user.first_name">
+        </div>
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="last_name" name="last_name"
+            [(ngModel)]="user.last_name">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Entrer votre adresse email</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email">
+        </div>
+        <input type="hidden" class="form-control" id="email" name="id" [(ngModel)]="this.id">
+        <button type="submit" class="btn btn-primary">Confirmer</button>
+    </form>
+    <!--Fin du formulaire de modification-->
+</div>
