@@ -1,13 +1,16 @@
+<h2 class=" mt-4 mb-4 text-center">Vos demandes reçues : </h2>
 <div class="container">
-	<div class="row" *ngFor="let ride of rides">
+	<div class="row justify-content-center mt-3" *ngFor="let ride of rides">
 		<div class="col-sm-6">
-			<div class="card">
+			<div class="card shadow">
 				<div class="card-body">
-					<p>{{ride.displayDepartureAddress}}</p>
-					<p>{{ride.displayArrivalAddress}}</p>
-					<button (click)="openReceivedDemands(ride.id)" type="button" class="btn btn-primary"
-						data-toggle="modal" data-target="#exampleModal">Voir les demandes</button>
-					<button (click)="deleteRideDriver(ride.id)">Supprimer le trajet</button>
+					<p> Départ : {{ride.displayDepartureAddress}}</p>
+					<p>Arrivée : {{ride.displayArrivalAddress}}</p>
+					<div class="d-flex justify-content-between">
+						<button (click)="openReceivedDemands(ride.id)" type="button" class="btn btn-secondary"
+							data-toggle="modal" data-target="#exampleModal">Voir les demandes</button>
+						<button (click)="deleteRideDriver(ride.id)" type="button" class="btn btn-danger" >Supprimer le trajet</button>
+					</div>	
 				</div>
 			</div>
 		</div>
@@ -24,14 +27,16 @@
 					</div>
 					<div class="modal-body">
 						<!-- ******Début fenetre demandes****** -->
-						<div class="row" *ngFor="let demand of demands">
-							<div class="col-sm-6">
-								<div class="card">
+						<div class="row justify-content-center mt-3 " *ngFor="let demand of demands">
+							<div class="col">
+								<div class="card shadow-sm " >
 									<div class="card-body">
 									
-										<p>{{demand.display_user_name}}</p>
-										<button (click)="acceptDemand(demand.id, ride.id)">Accepter</button>
-										<button (click)="declineDemand(demand.id, ride.id)">Refuser</button>
+										<p>Passager : {{demand.display_user_name}}</p>
+									<div class="d-flex justify-content-between">	
+										<button (click)="acceptDemand(demand.id, ride.id)" class="btn btn-primary" >Accepter</button>
+										<button (click)="declineDemand(demand.id, ride.id)" class="btn btn-danger">Refuser</button>
+									</div>	
 									</div>
 								</div>
 							</div>
