@@ -13,7 +13,7 @@ export class PassengerDemandsComponent implements OnInit {
   constructor(private service: UserService) { }
 
   ngOnInit(): void {
-    this.getPassengerDemands(9);
+    this.getPassengerDemands(localStorage.getItem("ID"));
   }
 
   getPassengerDemands(id: any) {
