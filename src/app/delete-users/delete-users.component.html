@@ -4,7 +4,10 @@
             <div class="col-6 border-dark mx-auto card h-100 justify-content-center mt-5 ">                
                     <p class="card-text">ID : {{user.id}}</p>
                     <p class="card-text">Nom et prénom : {{user.displayName}}</p>   
-                    <p class="card-text">Adresse mail : {{user.email}}</p>    
+                    <p class="card-text">Adresse mail : {{user.email}}</p>
+                    <div *ngIf="user.role == null" class="form-group text-center">
+                        <button class = "btn btn-success" (click)="validate(user.id)">Valider l'utilisateur </button>
+                    </div>       
                     <div class="form-group text-center">
                         <button class = "btn btn-danger" (click)="delete(user.id)">Supprimer l'utilisateur </button>
                     </div>                

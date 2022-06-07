@@ -29,14 +29,19 @@ export class LoginComponent implements OnInit {
   onLogin() {
     
     console.log(this.loginForm.value);
-    this.authService.login(this.loginForm.value).subscribe((data: any) =>{
+    this.authService.login(this.loginForm.value).subscribe((data: any) => {
       this.user_info = data;
-      localStorage.setItem("ID", this.user_info.id);
-      localStorage.setItem("isLogged", "true");
-      localStorage.setItem("role", this.user_info.role);
-      localStorage.setItem("email", this.user_info.email);
-      localStorage.setItem("displayName", this.user_info.displayName);
-      location.reload();            
+      
+      if (this.user_info.role == "user" || this.user_info.role == "admin") {
+        localStorage.setItem("ID", this.user_info.id);
+        localStorage.setItem("isLogged", "true");
+        localStorage.setItem("role", this.user_info.role);
+        localStorage.setItem("email", this.user_info.email);
+        localStorage.setItem("displayName", this.user_info.displayName);
+        location.reload(); 
+      } else {
+        alert("Votre compte n'est pas validé !");
+      }      
     });
     this.router.navigateByUrl('');
   }

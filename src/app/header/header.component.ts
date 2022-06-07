@@ -10,11 +10,13 @@ import { AuthService } from '../services/auth.service';
 export class HeaderComponent implements OnInit {
 
   name: any;
+  role: any;
 
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.name = localStorage.getItem("displayName");
+    this.role = localStorage.getItem("role");
   }
 
   isConnect() {
