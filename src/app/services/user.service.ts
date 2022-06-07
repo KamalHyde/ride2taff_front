@@ -63,4 +63,8 @@ export class UserService {
     return this.http.get("http://localhost:8080/bookedride/sendrequest?user_id=" + user_id + "&ride_id=" + ride_id);
 
   }
+
+  validate(id: any) {
+    return this.http.get("http://localhost:8080/users/validate/" + id);
+  }
 }

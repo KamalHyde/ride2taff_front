@@ -13,7 +13,6 @@ export class DeleteUsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllUser();
-
   }
 
   getAllUser() {
@@ -24,6 +23,12 @@ export class DeleteUsersComponent implements OnInit {
 
   delete(id:any){
     this.userService.deleteUser(id).subscribe(()=>{
+      this.getAllUser();
+    });
+  }
+
+  validate(id:any){
+    this.userService.validate(id).subscribe(()=>{
       this.getAllUser();
     });
   }
