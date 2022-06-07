@@ -4,13 +4,14 @@
 		<div class="col-sm-6">
 			<div class="card shadow">
 				<div class="card-body">
-					<p> Départ : {{ride.displayDepartureAddress}}</p>
+					<p>Départ : {{ride.displayDepartureAddress}}</p>
 					<p>Arrivée : {{ride.displayArrivalAddress}}</p>
 					<div class="d-flex justify-content-between">
 						<button (click)="openReceivedDemands(ride.id)" type="button" class="btn btn-secondary"
 							data-toggle="modal" data-target="#exampleModal">Voir les demandes</button>
-						<button (click)="deleteRideDriver(ride.id)" type="button" class="btn btn-danger" >Supprimer le trajet</button>
-					</div>	
+						<button (click)="deleteRideDriver(ride.id)" type="button" class="btn btn-danger">Supprimer le
+							trajet</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -29,14 +30,16 @@
 						<!-- ******Début fenetre demandes****** -->
 						<div class="row justify-content-center mt-3 " *ngFor="let demand of demands">
 							<div class="col">
-								<div class="card shadow-sm " >
+								<div class="card shadow-sm ">
 									<div class="card-body">
-									
+
 										<p>Passager : {{demand.display_user_name}}</p>
-									<div class="d-flex justify-content-between">	
-										<button (click)="acceptDemand(demand.id, ride.id)" class="btn btn-primary" >Accepter</button>
-										<button (click)="declineDemand(demand.id, ride.id)" class="btn btn-danger">Refuser</button>
-									</div>	
+										<div class="d-flex justify-content-between">
+											<button (click)="acceptDemand(demand.id, ride.id)"
+												class="btn btn-primary">Accepter</button>
+											<button (click)="declineDemand(demand.id, ride.id)"
+												class="btn btn-danger">Refuser</button>
+										</div>
 									</div>
 								</div>
 							</div>
