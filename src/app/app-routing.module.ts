@@ -4,6 +4,7 @@ import { AddRegularRideComponent } from './add-regular-ride/add-regular-ride.com
 import { AddRideComponent } from './add-ride/add-ride.component';
 import { DeleteUsersComponent } from './delete-users/delete-users.component';
 import { DemandsReceivedComponent } from './demands-received/demands-received.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 import { AuthGuard } from './guard/auth.guard';
 import { HomepageComponent } from './homepage/homepage.component';
 import { InformationUserComponent } from './information-user/information-user.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path:'delete-users', component: DeleteUsersComponent, canActivate: [AuthGuard] },
   { path:'addregularride', component: AddRegularRideComponent, canActivate: [AuthGuard] },
   { path:'passenger-demands', component: PassengerDemandsComponent, canActivate: [AuthGuard] },
-  { path:'information-user', component: InformationUserComponent}
+  { path:'information-user', component: InformationUserComponent},
+  { path:'edit-user', component: EditUserComponent}
 ];
 
 @NgModule({
