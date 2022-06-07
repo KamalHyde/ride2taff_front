@@ -9,19 +9,16 @@ import { UserService } from '../services/user.service';
 })
 export class DemandsReceivedComponent implements OnInit {
 
-  token: any;
+  id: any;
   rides!: any;
   demands!: any;
 
   constructor(private authService: AuthService, private service: UserService) { }
 
   ngOnInit(): void {
-
-    this.getAllRidesByDriver(11);
-
-    this.token = localStorage.getItem("ID");
-    this.getAllRidesByDriver(this.token);
-    console.log(this.token);
+    this.id = localStorage.getItem("ID");
+    this.getAllRidesByDriver(this.id);
+    console.log(this.id);
 
   }
 
@@ -41,7 +38,7 @@ export class DemandsReceivedComponent implements OnInit {
 
   deleteRideDriver(id: any) {
     return this.service.deleteRideDriver(id).subscribe(() => {
-      this.getAllRidesByDriver(9);
+      this.getAllRidesByDriver(this.id);
     });
   }
 
