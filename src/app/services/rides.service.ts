@@ -19,4 +19,12 @@ export class RidesService {
   newRegularRide(newRegularRide: any) {
     return this.http.post("http://localhost:8080/rides/newregularride", newRegularRide)
   }
+
+  getAllRides(){
+    return this.http.get("http://localhost:8080/rides/allRides");
+  }
+  deleteRidesByAdmin(id:any){
+    return this.http.get("http://localhost:8080/rides/delete/" + id);
+  }
+  
 }

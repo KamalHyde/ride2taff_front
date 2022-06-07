@@ -2,6 +2,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -21,6 +22,7 @@ import { InformationUserComponent } from './information-user/information-user.co
 
 import { httpInterceptorProviders } from './interceptor';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { DeleteRidesComponent } from './delete-rides/delete-rides.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     AddRegularRideComponent,
     PassengerDemandsComponent,
     InformationUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    DeleteRidesComponent
+  
 
   ],
   imports: [
