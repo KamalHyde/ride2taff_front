@@ -1,7 +1,8 @@
+<h2 class=" mt-4 mb-4 text-center">Gestion des utilisateurs: </h2>
 <div class="container ">
     <div  *ngFor="let user of users">  
         <div class="row align-items-center ">
-            <div class="col-6 border-dark mx-auto card h-100 justify-content-center mt-5 ">                
+            <div class="col-6 border mx-auto card shadow h-100 justify-content-center mt-5 ">                
                     <p class="card-text">ID : {{user.id}}</p>
                     <p class="card-text">Nom et prénom : {{user.displayName}}</p>   
                     <p class="card-text">Adresse mail : {{user.email}}</p>
