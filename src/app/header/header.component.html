@@ -9,6 +9,8 @@
         width="120"
       />
     </a>
+
+    <p *ngIf="this.name != null">Bonjour {{this.name | uppercase}}</p>
     <button
       class="navbar-toggler"
       type="button"
@@ -36,6 +38,19 @@
         <li class="nav-item px-5">
           <a class="nav-link text-warning" routerLink="/profile">Mon profil</a>
         </li>
+
+        <li class="nav-item px-5 dropdown">
+          <a class="nav-link text-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Outils Administrateur</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownmenuButton1">
+            <li class="nav-item px-5">
+              <a *ngIf="this.role == 'admin'" class="nav-link" routerLink="/delete-users">Supprimer un utilisateur</a>
+            </li>
+            <li class="nav-item px-5">
+              <a *ngIf="this.role == 'admin'" class="nav-link" routerLink="/delete-rides">Supprimer une course</a>
+            </li>
+          </ul>          
+        </li>
+        
 
         <li class="nav-item px-5" *ngIf="isConnect() == false">
           <button class="btn btn-primary" routerLink="/login">Connexion</button>
