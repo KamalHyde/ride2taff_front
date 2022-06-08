@@ -29,8 +29,8 @@
 						</div>
 						<div class="modal-body">
 							<!-- ******Début fenetre demandes****** -->
-							<div class="row justify-content-center mt-3 " *ngFor="let demand of demands">
-								<div class="col">
+							<div class="row justify-content-center mt-3 " *ngFor="let demand of demands" >
+								<div class="col" *ngIf ="demand.status != 'refusee'">
 									<div class="card shadow-sm ">
 										<div class="card-body">
 	
@@ -38,9 +38,12 @@
                       <p>Email : {{demand.email}}</p>
 											<div class="d-flex justify-content-between">
 												<button (click)="acceptDemand(demand.id, ride.id)"
-													class="btn btn-primary">Accepter</button>
+													class="btn btn-primary"
+													*ngIf ="demand.status != 'acceptee'">Accepter</button>
 												<button (click)="declineDemand(demand.id, ride.id)"
-													class="btn btn-danger">Refuser</button>
+													class="btn btn-danger"
+													*ngIf ="demand.status != 'acceptee'">Refuser</button>
+												<p *ngIf ="demand.status == 'acceptee'">Vous avez accepté la demande</p>
 											</div>
 
 										</div>
