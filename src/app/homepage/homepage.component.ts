@@ -27,7 +27,9 @@ export class HomepageComponent implements OnInit {
     }
 
   sendARequest(user_id: any, ride_id: any) {
-    this.userService.sendARequest(user_id, ride_id).subscribe();
+    this.userService.sendARequest(user_id, ride_id).subscribe(data =>{
+      alert('Votre demande a été envoyée');
+    });
   }
 
   isConnect() {
