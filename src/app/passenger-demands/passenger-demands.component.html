@@ -1,17 +1,21 @@
-<div class="container  ">
-    <h2 class=" mt-4 mb-4 text-center">Vos demandes de trajets :</h2>    
-    <div class="row justify-content-center mt-3 " *ngFor="let demand of demands">            
-        <div class="col-sm-6  ">
-            <div class="card shadow">
-                <div class="card-body">
-                    <p>Ville de départ : {{ demand.display_city }}, {{ demand.departure_zip_code }}</p>
-                    <p>Date de départ : {{ demand.departure_date }}</p>
-                    <p>Ville d'arrivée : {{ demand.arrival_city }}</p>
-                    <p>{{ demand.status }}</p>
-                    <p *ngIf="demand.status == 'acceptee'">Mail du conducteur : {{demand.email}}</p>
-                    <button type="button" class="btn btn-secondary float-right " (click)="cancelRequest(demand.id_request)">Annuler la demande</button>
+
+<div class="main">
+    <div class="container  ">
+        <h2 class="pt-4 mb-4 text-center">Vos demandes de trajets :</h2>    
+        <div class="row justify-content-center mt-3 " *ngFor="let demand of demands">            
+            <div class="col-sm-6  ">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <p>Ville de départ : {{ demand.display_city }}, {{ demand.departure_zip_code }}</p>
+                        <p>Date de départ : {{ demand.departure_date }}</p>
+                        <p>Ville d'arrivée : {{ demand.arrival_city }}</p>
+                        <p>{{ demand.status }}</p>
+                        <p *ngIf="demand.status == 'acceptee'">Mail du conducteur : {{demand.email}}</p>
+                        <button type="button" class="btn btn-secondary float-right " (click)="cancelRequest(demand.id_request)">Annuler la demande</button>
+                    </div>
+
                 </div>
             </div>
-        </div>
+        </div>    
     </div>    
 </div>

@@ -1,77 +1,75 @@
-<div class="container">
+<div class="main">
+  <div class="container">
 
     <!-- En-tête -->
 
-  <h1 class="mt-4 mb-4 text-center">Tous les chemins mènent à IPIPOE</h1>
+    <h1 class="pt-4 mb-4 text-center">Tous les chemins mènent à IPIPOE</h1>
 
-  <!-- Début formulaire de recherche -->
+    <!-- Début formulaire de recherche -->
 
-<div class="text-center">
-  <img src="https://cdn.discordapp.com/attachments/965882397306523728/980759202937069578/Group-11842x.png" class= banner style=" max-width: 40%">
-</div>
-  <div class="card m-3 search">
-    <div class="card-body">
-      <form (ngSubmit)="searchRide(formSearchRide)" #formSearchRide="ngForm">
-        <div class="form-group row justify-content-around mb-0">
-          <input
-            type="text"
-            class="form-control col-sm-4"
-            name="departure_zip_code"
-            ngModel
-            placeholder="Code Postal"
-          />
-          <input type="date" class="form-control col-sm-4" name="departure_date" placeholder="Date de départ" ngModel>
-          <button type="submit" class="btn btn-primary">Rechercher</button>
-        </div>
-      </form>
-
+    <div class="text-center">
+      <img src="https://cdn.discordapp.com/attachments/965882397306523728/980759202937069578/Group-11842x.png"
+        class=banner style=" max-width: 40%">
     </div>
-  </div>
-
-  <!-- Fin formulaire de recherche -->
-
-  <!-- Début résultats de recherche -->
-
-
-  <div class="row  justify-content-center " *ngFor="let r of ride">
-    <div class="col-sm-8">
-      <div class="card m-4 rounded-pill" style="max-width: 700px">
-        <div class="row g-0">
-          <div class="col-sm-4 m-auto d-flex justify-content-end">
-            <img
-              src="https://cdn.discordapp.com/attachments/965882397306523728/976769049029644308/Sans_titre_9_-removebg-preview.png"
-              alt=""
-              class="img-fluid" style="max-width: 70%"
-            />
+    <div class="card m-3 search rounded-pill shadow">
+      <div class="card-body">
+        <form (ngSubmit)="searchRide(formSearchRide)" #formSearchRide="ngForm">
+          <div class="form-group row justify-content-around mb-0">
+            <input type="text" class="form-control col-sm-4" name="departure_zip_code" ngModel
+              placeholder="Code Postal" />
+            <input type="date" class="form-control col-sm-4" name="departure_date" placeholder="Date de départ" ngModel>
+            <button type="submit" class="btn btn-primary">Rechercher</button>
           </div>
-          <div class="col-sm-8">
-            <div class="card-body row">
-              <div class="col-sm-7">
-                <p class="text-info">Date de départ :</p>
-                <p class="text-info">Lieu de départ :</p>
-                <p class="text-info">Heure de départ :</p>
-                <p class="text-info">Nombre de places :</p>
-              </div>
-              <div class="col-sm-5">
-                <p>{{ r.date }}</p>
-                <p style="text-transform: capitalize">
-                  {{ r.departure_city }} {{ r.departure_zip_code }}
-                </p>
-                <p>{{ r.times }}</p>
-                <p>{{ r.seats }}</p>              
-              </div>
+        </form>
 
-              <div class="form-group text-center">
-                <button *ngIf="isConnect()" (click)="sendARequest(user_id, r.id)" type="submit" class="btn btn-primary">Envoyer une demande</button>
+      </div>
+    </div>
+
+    <!-- Fin formulaire de recherche -->
+
+    <!-- Début résultats de recherche -->
+
+
+    <div class="row  justify-content-center " *ngFor="let r of ride">
+      <div class="col-sm-8">
+        <div class="card m-4 rounded-pill" style="max-width: 700px">
+          <div class="row g-0">
+            <div class="col-sm-4 m-auto d-flex justify-content-end">
+              <img
+                src="https://cdn.discordapp.com/attachments/965882397306523728/976769049029644308/Sans_titre_9_-removebg-preview.png"
+                alt="" class="img-fluid" style="max-width: 70%" />
+            </div>
+            <div class="col-sm-8">
+              <div class="card-body row">
+                <div class="col-sm-7">
+                  <p class="text-info">Date de départ :</p>
+                  <p class="text-info">Lieu de départ :</p>
+                  <p class="text-info">Heure de départ :</p>
+                  <p class="text-info">Nombre de places :</p>
+                </div>
+                <div class="col-sm-5">
+                  <p>{{ r.date }}</p>
+                  <p style="text-transform: capitalize">
+                    {{ r.departure_city }} {{ r.departure_zip_code }}
+                  </p>
+                  <p>{{ r.times }}</p>
+                  <p>{{ r.seats }}</p>
+                </div>
+
+                <div class="form-group text-center">
+                  <button *ngIf="isConnect()" (click)="sendARequest(user_id, r.id)" type="submit"
+                    class="btn btn-primary">Envoyer une demande</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
-
     </div>
-  </div>
 
-  <!-- Fin résultats de recherche -->
+    <!-- Fin résultats de recherche -->
+
+  </div>
 
 </div>
