@@ -31,8 +31,7 @@ export class DemandsReceivedComponent implements OnInit {
 
   openReceivedDemands(id: any) {
     return this.service.openReceivedDemands(id).subscribe(data => {
-     this.demands = data;
-     console.log(this.demands);  
+     this.demands = data;  
     })
   }
 
@@ -43,15 +42,15 @@ export class DemandsReceivedComponent implements OnInit {
   }
 
   acceptDemand(user_id: any, ride_id: any) {
-    return this.service.acceptDemand(user_id, ride_id).subscribe(() => {
-      console.log("bravo");
+    return this.service.acceptDemand(user_id, ride_id).subscribe(() => {  
+      location.reload();    
     });
       
   }
 
   declineDemand(user_id: any, ride_id: any) {
     return this.service.declineDemand(user_id, ride_id).subscribe(() => {
-      console.log("bravo");
+      location.reload();
     });
   }
 }
