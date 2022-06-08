@@ -4,10 +4,11 @@
         <div class="col-sm-6  ">
             <div class="card shadow">
                 <div class="card-body">
-                    <p>Ville de départ :{{ demand.display_city }}, {{ demand.departure_zip_code }}</p>
+                    <p>Ville de départ : {{ demand.display_city }}, {{ demand.departure_zip_code }}</p>
                     <p>Date de départ : {{ demand.departure_date }}</p>
                     <p>Ville d'arrivée : {{ demand.arrival_city }}</p>
                     <p>{{ demand.status }}</p>
+                    <p *ngIf="demand.status == 'acceptee'">Mail du conducteur : {{demand.email}}</p>
                     <button type="button" class="btn btn-secondary float-right " (click)="cancelRequest(demand.id_request)">Annuler la demande</button>
                 </div>
             </div>
