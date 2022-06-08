@@ -35,12 +35,14 @@
 										<div class="card-body">
 	
 											<p>Passager : {{demand.display_user_name}}</p>
+                      <p>Email : {{demand.email}}</p>
 											<div class="d-flex justify-content-between">
 												<button (click)="acceptDemand(demand.id, ride.id)"
 													class="btn btn-primary">Accepter</button>
 												<button (click)="declineDemand(demand.id, ride.id)"
 													class="btn btn-danger">Refuser</button>
 											</div>
+
 										</div>
 									</div>
 								</div>
