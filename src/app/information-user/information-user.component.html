@@ -1,0 +1,22 @@
+<div class="main">
+    <h2 class="pt-4 mb-4 text-center">Vos informations : </h2>
+    <div class="container ">     
+        <div class="col-6 shadow-sm mx-auto card h-100 justify-content-center mt-5 ">                
+            <p class="card-text">Prénom : {{user.first_name}}</p>
+            <p class="card-text">Nom : {{user.last_name}}</p>
+            <p class="card-text">Email : {{user.email}}</p>  
+            <p>
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                 Afficher votre mot de passe
+                </button>
+            </p>
+    
+            <div class="collapse" id="collapseExample">           
+                <p class="card-text">Mot de passe : {{user.password}}</p>              
+            </div>  
+            
+            <a class="nav-link " routerLink="/edit-user">Modifier mes informations</a>  
+        </div>   
+       
+    </div>  
+</div>

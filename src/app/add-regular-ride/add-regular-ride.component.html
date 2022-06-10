@@ -1,0 +1,52 @@
+<div class="main">
+    <div class="container" style="max-width: 30%">
+        <h1 class="text-center pt-4 mb4">Ajouter un trajet régulier : </h1>
+    
+        <form class="p-4 rounded" [formGroup]="newRideForm">
+            <div class="form-group">
+                <label>Code postal :</label> 
+                <input type="number" class="form-control" placeholder="entrer CP" formControlName="departure_zip_code">
+            </div>
+            <div class="form-group">
+               <label>Ville de départ :</label> 
+               <input type="text" class="form-control" placeholder="entrer ville" formControlName="departure_city">
+            </div>
+            <div class="form-group">
+                <label>Code postal :</label> 
+                <input type="number" class="form-control" placeholder="entrer CP" formControlName="arrival_zip_code">
+            </div>
+            <div class="form-group">
+                <label>Ville d'arrivée :</label> 
+                <input type="text" class="form-control" placeholder="entrer ville" formControlName="arrival_city">
+             </div>
+             <div class="form-group">
+                <label>Places sur le trajet :</label> 
+                <input type="number" class="form-control" placeholder="entrer places" formControlName="number_seats">
+            </div>
+            <div class="form-group">
+                <label>Heure de départ :</label> 
+                <input type="time" class="form-control" placeholder="entrer heure" formControlName="departure_time">
+            </div>
+            <div class="form-group">
+                <label>Date de début :</label> 
+                <input type="date" class="form-control" formControlName="start_date">
+            </div>
+            <div class="form-group">
+                <label>Date de fin :</label> 
+                <input type="date" class="form-control" formControlName="end_date">
+            </div>
+            <div class="form-group">
+                <label>Occurence du trajet : </label>
+                <select formControlName="status">
+                    <option value="quotidien">quotidien</option>
+                    <option value="hebdomadaire">hebdomadaire</option>
+                    <option value="mensuel">mensuel</option>
+                </select>
+                
+             </div>
+            
+            <button type="submit" (click)="newRegularRide()" [disabled]="newRideForm.invalid" class="btn btn-primary">Valider ma course</button>
+        </form>
+    </div>
+</div>
+

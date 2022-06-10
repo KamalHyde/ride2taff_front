@@ -1,0 +1,17 @@
+<h2 class=" mt-4 mb-4 text-center">Supprimer une course : </h2>
+<div class="container ">
+    <div  *ngFor="let rides of rides">  
+        <div class="row align-items-center ">
+            <div class="col-6 border mx-auto card shadow h-100 justify-content-center mt-5 ">                
+                    <p class="card-text">Départ : {{rides.displayDepartureAddress}}</p>
+                    <p class="card-text">Arrivée: {{rides.displayArrivalAddress}}</p>   
+                    <p class="card-text">Date de départ: {{rides.departure_date}}</p>
+                    <p class="card-text">Heure de départ: {{rides.departure_time}}</p>     
+                    <div class="form-group text-center">
+                        <button class = "btn btn-danger" (click)="deleteRides(rides.id)">Supprimer la course </button>
+                    </div>                
+            </div>    
+        </div>
+    </div>
+</div>
+       
